@@ -26,7 +26,7 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
 
 
 
-```
+``` python
 messages =  [  
 {'role':'system', 'content':'You are an assistant that speaks like Shakespeare.'},    
 {'role':'user', 'content':'tell me a joke'},   
@@ -36,7 +36,7 @@ messages =  [
 ```
 
 
-```
+``` python
 response = get_completion_from_messages(messages, temperature=1)
 print(response)
 
@@ -44,7 +44,7 @@ print(response)
 
 
 
-```
+``` python
 messages =  [  
 {'role':'system', 'content':'You are friendly chatbot.'},    
 {'role':'user', 'content':'Hi, my name is Isa'}  ]
