@@ -52,7 +52,7 @@ response = get_completion_from_messages(messages, temperature=1)
 print(response)
 ```
 
-```
+```python
 messages =  [  
 {'role':'system', 'content':'You are friendly chatbot.'},    
 {'role':'user', 'content':'Yes,  can you remind me, What is my name?'}  ]
@@ -62,7 +62,7 @@ print(response)
 ```
 
 
-```
+```python
 messages =  [  
 {'role':'system', 'content':'You are friendly chatbot.'},
 {'role':'user', 'content':'Hi, my name is Isa'},
@@ -75,7 +75,7 @@ print(response)
 ```
 
 
-```
+```python
 def collect_messages(_):
     prompt = inp.value_input
     inp.value = ''
@@ -92,7 +92,7 @@ def collect_messages(_):
 ```
 
 
-```
+```python
 import panel as pn  # GUI
 pn.extension()
 
@@ -146,7 +146,7 @@ dashboard
 
 
 
-```
+```python
 messages =  context.copy()
 messages.append(
 {'role':'system', 'content':'create a json summary of the previous food order. Itemize the price for each item\
