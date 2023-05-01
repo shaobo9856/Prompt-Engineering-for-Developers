@@ -51,7 +51,7 @@ I'm sorry, but as an AI Language model, I don't have access to your name. Can yo
 
 
 ## OrderBot
-
+语言模型的每个对话都是一个独立的交互，这意味着您必须为模型提供所有相关消息，以便在当前对话中提取。 如果您希望记住对话的较早部分，则必须在模型的输入中提供较早的交流，我们将其称为上下文。 我们已经给出了模型需要的上下文Context，我们输入Context到这种消息列表中。 现在我们要构建自己的聊天机器人orderbot。 它将自动收集用户prompt和assistant回复以构建这个orderbot。 它会在比萨餐厅接受订单，所以首先我们要定义这个辅助函数，它所做的是收集我们的用户消息，这将从将在下面构建的用户界面中收集提示，然后将其附加到上下文的列表中，然后每次都会使用该上下文调用模型。 然后模型响应也被添加到上下文中等等，所以它变得越来越长。
 
 ```python
 def collect_messages(_):
