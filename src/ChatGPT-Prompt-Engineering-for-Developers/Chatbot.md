@@ -23,22 +23,19 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
 
 ```
 
-
-
-
-
-
 ```python
 messages =  [  
-{'role':'system', 'content':'You are friendly chatbot.'},
-{'role':'user', 'content':'Hi, my name is Isa'},
-{'role':'assistant', 'content': "Hi Isa! It's nice to meet you. \
-Is there anything I can help you with today?"},
-{'role':'user', 'content':'Yes, you can remind me, What is my name?'}  ]
+{'role':'system', 'content':'You are friendly chatbot.'},    
+{'role':'user', 'content':'Yes,  can you remind me, What is my name?'}  ]
 response = get_completion_from_messages(messages, temperature=1)
 print(response)
+```
+返回结果
 
 ```
+I'm sorry, but as an AI Language model, I don't have access to your name. Can you please tell me your name?
+```
+
 
 
 ```python
