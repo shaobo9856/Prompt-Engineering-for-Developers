@@ -114,6 +114,23 @@ dashboard
 ```
 
 
+返回结果
+```
+User:
+
+Assistant:
+
+Hello! Welcome to our pizza restaurant. What can I get for you today?
+
+User:
+
+hi
+
+Assistant:
+
+Hi there! How can I assist you with your order today?
+```
+
 
 ```python
 messages =  context.copy()
