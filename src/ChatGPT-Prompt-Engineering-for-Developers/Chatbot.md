@@ -1,10 +1,10 @@
 # Chatbot(聊天机器人)
 
-大型语言模型的一个令人兴奋之处在于，你可以用它来建立一个自定义聊天机器人而只需付出一些努力。ChatGPT，这个网络界面是一种让你通过大型语言模型进行对话的方式。不过很酷的是，你还可以利用大型语言模型来构建自定义聊天机器人，比如扮演AI客户服务代理或餐厅订单处理器等角色。在这个教程中，你将学会如何自己构建这样的机器人。
+大型语言模型的一个令人兴奋之处在于你可以用它来轻松的构建一个自定义Chatbot，比如扮演AI客户服务代理或餐厅订单处理器等角色。在这个教程中，你将学会如何自己构建这样的机器人。
 
 首先我们先详细地讲解OpenAI ChatCompletions格式的组成部分，然后你可以自行构建聊天机器人。
 
-我们将定义两个助手函数。在所有视频中，我们一直在使用的是get_completion函数。但是如果你仔细看它，我们给出了prompt，但在函数的内部，我们实际上是将这个prompt放入了类似用户信息的东西中。这是因为ChatGPT模型是一个聊天模型，这意味着它经过训练，可以接受一系列的信息作为输入，然后返回一个由模型生成的信息作为输出。因此，user信息就是输入，而assistant信息就是输出。
+我们将定义两个辅助函数。在我们一直在使用的是get_completion函数，我们给出了prompt，将这个prompt放入了message中。它经过训练，可以接受一系列的信息作为输入，然后返回一个由模型生成的信息作为输出。 因此，user信息就是输入，而assistant信息就是输出。
 
 ## 配置Chatbot
 
@@ -29,6 +29,7 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
 
 ```
 
+
 在第二个辅助函数get_completion_from_messages中，我们不是将一个单独的prompt作为输入，并得到一个单独的结果，我们将传递一个信息列表，
 这些信息可以来自各种不同的角色，所以我会描述每个角色，第一条信息是系统信息，它提供了一个总体的指导，然后在这条信息之后，有用户和助理之间的轮换。
 
@@ -40,7 +41,9 @@ messages =  [
 response = get_completion_from_messages(messages, temperature=1)
 print(response)
 ```
+
 返回结果
+
 
 ```
 I'm sorry, but as an AI Language model, I don't have access to your name. Can you please tell me your name?
@@ -124,6 +127,7 @@ dashboard
 
 
 返回结果
+
 ```
 User:
 
@@ -140,7 +144,9 @@ Assistant:
 Hi there! How can I assist you with your order today?
 ```
 
+
 最后，我们把上面的上下文context加到message数组中，然后加入新的prompt去获取context总结。
+
 
 ```python
 messages =  context.copy()
@@ -208,5 +214,6 @@ Sure, here's a JSON summary of the order:
 
 ```
 
-本节小结
+## 本节小结
+
 本节主要是通过编写prompt来实现我们想要的Chatbot,并给出了实例OrderBot。 我们使用了gpt-3.5-turbo模型，用辅助函数get_completion_from_messages去构造单轮对话。在第二部分，我们把每轮对话加入context，让gpt去获取前轮信息，并根据最新prompt来获取结果。
