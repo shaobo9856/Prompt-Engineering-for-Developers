@@ -145,3 +145,56 @@ print(response)
 
 ```
 
+
+返回结果
+
+```
+Sure, here's a JSON summary of the order:
+
+{
+  "pizza": [
+    {
+      "type": "pepperoni",
+      "size": "large",
+      "price": 12.95
+    },
+    {
+      "type": "cheese",
+      "size": "medium",
+      "price": 9.25
+    }
+  ],
+  "toppings": [
+    {
+      "type": "extra cheese",
+      "price": 2.00
+    },
+    {
+      "type": "mushrooms",
+      "price": 1.50
+    }
+  ],
+  "drinks": [
+    {
+      "type": "coke",
+      "size": "medium",
+      "price": 2.00
+    },
+    {
+      "type": "sprite",
+      "size": "small",
+      "price": 1.00
+    }
+  ],
+  "sides": [
+    {
+      "type": "fries",
+      "size": "large",
+      "price": 4.50
+    }
+  ],
+  "total_price": 34.20
+}
+
+```
+
