@@ -140,6 +140,7 @@ Assistant:
 Hi there! How can I assist you with your order today?
 ```
 
+最后，我们把上面的上下文context加到message数组中，然后加入新的prompt去获取context总结。
 
 ```python
 messages =  context.copy()
