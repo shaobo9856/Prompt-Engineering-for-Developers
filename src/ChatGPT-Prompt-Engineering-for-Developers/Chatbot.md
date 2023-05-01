@@ -208,3 +208,5 @@ Sure, here's a JSON summary of the order:
 
 ```
 
+本节小结
+本节主要是通过编写prompt来实现我们想要的Chatbot,并给出了实例OrderBot。 我们使用了gpt-3.5-turbo模型，用辅助函数get_completion_from_messages去构造单轮对话。在第二部分，我们把每轮对话加入context，让gpt去获取前轮信息，并根据最新prompt来获取结果。
